@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title> <%= text %> MQTT Web Client</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://unpkg.com/mqtt@3.0.0/dist/mqtt.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmFLRS27Whoh2veopurCDx9ukJCOWrKAs&callback=initMap"
+		async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td><b>Yerel Saat (Türkiye):</b></td>
+			<td><p id="saat"></p></td>
+			<td><<>></td>
+			<td><b>Başlangıç Saati: </td>
+			<td><select name="startTime" id="t1">
+				<option selected="selected">00</option>
+				<option selected="selected">01</option>
+				<option selected="selected">02</option>
+				<option selected="selected">03</option>
+				<option selected="selected">04</option>
+				<option selected="selected">05</option>
+				<option selected="selected">06</option>
+				<option selected="selected">07</option>
+				<option selected="selected">08</option>
+				<option selected="selected">09</option>
+				<option selected="selected">10</option>
+				<option selected="selected">11</option>
+				<option selected="selected">12</option>
+				<option selected="selected">13</option>
+				<option selected="selected">14</option>
+				<option selected="selected">15</option>
+				<option selected="selected">16</option>
+				<option selected="selected">17</option>
+				<option selected="selected">18</option>
+				<option selected="selected">19</option>
+				<option selected="selected">20</option>
+				<option selected="selected">21</option>
+				<option selected="selected">22</option>
+				<option selected="selected">23</option>
+				<option selected="selected">24</option>
+			  </select></td>
+			<td>:00</td>
+			<td>|</td>
+			<td><b>Bitiş Saati: </td>
+				<td><select name="endTime" id="t2">
+					<option selected="selected">00</option>
+					<option selected="selected">01</option>
+					<option selected="selected">02</option>
+					<option selected="selected">03</option>
+					<option selected="selected">04</option>
+					<option selected="selected">05</option>
+					<option selected="selected">06</option>
+					<option selected="selected">07</option>
+					<option selected="selected">08</option>
+					<option selected="selected">09</option>
+					<option selected="selected">10</option>
+					<option selected="selected">11</option>
+					<option selected="selected">12</option>
+					<option selected="selected">13</option>
+					<option selected="selected">14</option>
+					<option selected="selected">15</option>
+					<option selected="selected">16</option>
+					<option selected="selected">17</option>
+					<option selected="selected">18</option>
+					<option selected="selected">19</option>
+					<option selected="selected">20</option>
+					<option selected="selected">21</option>
+					<option selected="selected">22</option>
+					<option selected="selected">23</option>
+					<option selected="selected">24</option>
+				  </select></td>
+				  <td>:00</td>
+				  <td>		</td>
+			<td><input type="button" onclick="fTime()" id="btn" value="HARİTADA GÖSTER" name=""></td>
+			<td><a href="http://localhost/"><input type="button" id="btn2" value="KULLANIM KILAVUZU" name=""></a></td>
+		</tr>
+	</table>
+	<div id="map-container">
+		<div id="map"></div>
+
+
+		
+	</div>
+
+</body>
