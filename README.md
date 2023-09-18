@@ -1,2 +1,2 @@
 # Node.JS Projeleri
-readme üzerinde çalışma yapılacaktır
+readme üzerinde çalışma yapılacaktır.
